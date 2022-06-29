@@ -92,3 +92,11 @@ p {
   padding: 5px;
   margin-right: 10px;
 }
+.trash {
+  width: 20px;
+  height: 20px;
+}
+.trash:hover {
+  transform: scale(1.1);
+  animation: border 0.4s ease 1 forwards;
+}
