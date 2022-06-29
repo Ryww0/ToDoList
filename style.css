@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: rgb(56, 56, 56);
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+input {
+  background: none;
+  border: none;
+  font-weight: 800;
+}
+button,
+input {
+  font-family: "Montserrat", sans-serif;
+}
+h2 {
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1;
+}
+p {
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+/* ======== */
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.bold {
+  font-weight: 800;
+}
+.m15 {
+  margin: 15px;
+}
+
+/* ======== */
+
+.card {
+  width: 300px;
+  max-width: 90%;
+  height: 500px;
+}
+.top-card {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 25%;
+  background: rgb(214, 255, 139);
+}
+.bot-card {
+  width: 100%;
+  height: 75%;
+  background: #fff;
+  padding-top: 15px;
+}
+.task {
+  border-bottom: 1px solid black;
+}
+.add-task {
+  bottom: 0;
+}
+.cross {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #000;
+  border: none;
+  padding: 5px;
+  margin-right: 10px;
+}

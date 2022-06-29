@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- A CARD -->
+    <!-- FIXME delete m15 plus tard -->
+    <div class="card m15">
+      <!-- TOP PART OF THE CARD -->
+      <div class="top-card flex column space-between">
+        <h2 class="m15">to <span class="bold">do</span> list</h2>
+        <input class="m15" type="text" placeholder="insérer une date" />
+      </div>
+
+      <!-- BOTTOM PART OF THE CARD -->
+      <div class="bot-card relative flex column">
+        <!-- A TASK -->
+        <!-- <div class="task flex m15">
+          <p>sdf sjhdf shdbf</p>
+        </div> -->
+
+        <!-- ADD TASK PART -->
+        <div class="add-task absolute m15 flex">
+          <button class="cross">
+            <img
+              src="./images/cross.svg"
+              alt="image de croix pour validation de tâches"
+            />
+          </button>
+          <input type="text" placeholder="insérer une tâche" />
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- LINK JS SCRIPT TO THE HTML FILE -->
+  <script src="./app.js"></script>
+</html>
