@@ -6,10 +6,13 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: rgb(56, 56, 56);
+  background: rgb(56, 56, 56) no-repeat;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center !important;
   font-weight: 500;
+  min-height: 100vh;
 }
 input {
   background: none;
@@ -59,7 +62,7 @@ p {
 .card {
   width: 300px;
   max-width: 90%;
-  height: 500px;
+  min-height: auto;
 }
 .top-card {
   border-radius: 15px 15px 0 0;
@@ -69,12 +72,13 @@ p {
 }
 .bot-card {
   width: 100%;
-  height: 75%;
+  min-height: 75%;
   background: #fff;
   padding-top: 15px;
 }
 .task {
   border-bottom: 1px solid black;
+  margin-bottom: 50px;
 }
 .add-task {
   bottom: 0;

@@ -16,7 +16,7 @@
   <body>
     <!-- A CARD -->
     <!-- FIXME delete m15 plus tard -->
-    <div class="card m15">
+    <div class="card">
       <!-- TOP PART OF THE CARD -->
       <div class="top-card flex column space-between">
         <h2 class="m15">to <span class="bold">do</span> list</h2>
@@ -29,16 +29,21 @@
         <!-- <div class="task flex m15">
           <p>sdf sjhdf shdbf</p>
         </div> -->
+        <div class="tasks"></div>
 
         <!-- ADD TASK PART -->
-        <div class="add-task absolute m15 flex">
+        <div class="add-task relative m15 flex">
           <button class="cross">
             <img
               src="./images/cross.svg"
               alt="image de croix pour validation de tâches"
             />
           </button>
-          <input type="text" placeholder="insérer une tâche" />
+          <input
+            class="input-task"
+            type="text"
+            placeholder="insérer une tâche"
+          />
         </div>
       </div>
     </div>
