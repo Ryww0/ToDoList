@@ -13,7 +13,7 @@ function addTask() {
     inputAddTask.value = "";
 
     //delete new task on click the trash (must be in the function addTask to work)
-    let btnDel = document.querySelectorAll("img");
+    let btnDel = document.querySelectorAll(".trash");
     btnDel.forEach((del) => {
       del.addEventListener("click", () => {
         del.parentElement.style.display = "none";
@@ -37,7 +37,7 @@ inputAddTask.addEventListener("keydown", function (e) {
       // after the new task is added, delete the input content
       inputAddTask.value = "";
 
-      let btnDel = document.querySelectorAll("img");
+      let btnDel = document.querySelectorAll(".trash");
       btnDel.forEach((del) => {
         del.addEventListener("click", () => {
           del.parentElement.style.display = "none";
