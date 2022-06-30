@@ -7,7 +7,7 @@ function addTask() {
   if (inputAddTask.value === "") {
     return;
   } else {
-    newTask.innerHTML = `<div class="task flex m15 space-between"><p>${inputAddTask.value}</p><img class="trash" src="./images/trash_black.svg" alt="trash to delete"/></div>`;
+    newTask.innerHTML = `<div class="task flex m15 space-between center"><div class="flex"><input class="checkbox" type="checkbox" name="${inputAddTask.value}" /><label for="${inputAddTask.value}">${inputAddTask.value}</label></div><img class="trash" src="./images/trash_black.svg" alt="trash to delete"/></div>`;
     tasks.append(newTask);
     // after the new task is added, delete the input content
     inputAddTask.value = "";
@@ -17,6 +17,18 @@ function addTask() {
     btnDel.forEach((del) => {
       del.addEventListener("click", () => {
         del.parentElement.style.display = "none";
+      });
+    });
+
+    //FIXME checked active line through on all tasks
+    let checkbox = document.querySelectorAll(".checkbox");
+    let labelTask = document.querySelectorAll("label");
+
+    checkbox.forEach((box) => {
+      box.addEventListener("click", () => {
+        labelTask.forEach((task) => {
+          task.style.textDecoration = "line-through";
+        });
       });
     });
   }
@@ -32,7 +44,7 @@ inputAddTask.addEventListener("keydown", function (e) {
     if (inputAddTask.value === "") {
       return;
     } else {
-      newTask.innerHTML = `<div class="task flex m15 space-between"><p>${inputAddTask.value}</p><img class="trash" src="./images/trash_black.svg" alt="trash to delete"/></div>`;
+      newTask.innerHTML = `<div class="task flex m15 space-between center"><div class="flex"><input class="checkbox" type="checkbox" name="${inputAddTask.value}" /><label for="${inputAddTask.value}">${inputAddTask.value}</label></div><img class="trash" src="./images/trash_black.svg" alt="trash to delete"/></div>`;
       tasks.append(newTask);
       // after the new task is added, delete the input content
       inputAddTask.value = "";
