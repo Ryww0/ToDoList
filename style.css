@@ -51,6 +51,9 @@ input[type="checkbox"]:checked {
   margin: 0px;
   position: relative;
 }
+.checked {
+  color: green;
+}
 /* input[type="checkbox"]:checked:before {
   font-family: FontAwesome;
   content: "\f00c";

@@ -1,6 +1,7 @@
 const btnAddTask = document.querySelector(".cross");
 const inputAddTask = document.querySelector(".input-task");
 const tasks = document.querySelector(".tasks");
+let checkbox = document.querySelectorAll(".checkbox");
 
 function addTask() {
   let newTask = document.createElement("div");
@@ -20,15 +21,14 @@ function addTask() {
       });
     });
 
-    //FIXME checked active line through on all tasks
-    let checkbox = document.querySelectorAll(".checkbox");
-    let labelTask = document.querySelectorAll("label");
+    //FIXME 1 sur deux marche pas
+    checkbox = document.querySelectorAll(".checkbox");
+    // let labelTask = document.querySelectorAll("label");
 
     checkbox.forEach((box) => {
       box.addEventListener("click", () => {
-        labelTask.forEach((task) => {
-          task.style.textDecoration = "line-through";
-        });
+        box.classList.toggle("checked");
+        box.nextElementSibling.classList.toggle("checked");
       });
     });
   }
@@ -53,6 +53,17 @@ inputAddTask.addEventListener("keydown", function (e) {
       btnDel.forEach((del) => {
         del.addEventListener("click", () => {
           del.parentElement.style.display = "none";
+        });
+      });
+
+      //FIXME
+      checkbox = document.querySelectorAll(".checkbox");
+      // let labelTask = document.querySelectorAll("label");
+
+      checkbox.forEach((box) => {
+        box.addEventListener("click", () => {
+          // box.classList.toggle("checked");
+          box.nextElementSibling.classList.toggle("checked");
         });
       });
     }
